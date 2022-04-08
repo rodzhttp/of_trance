@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, Image, Dimensions, View } from 'react-native';
 import topo from '../../assets/topo.png';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo2.png';
+import prod1 from '../../assets/prod1.png';
 
 const width = Dimensions.get("screen").width;
 const largura = 720;
@@ -11,27 +12,39 @@ const valor = altura / largura * width;
 export default function Colecao(){
     return <> 
         <Image source={topo} style={estilos.topo} />
+        <Image source={logo} style={estilos.logo}/>
 
         <Text style={estilos.titulo}>OF TRANCE</Text>
 
+        <View style={estilos.cabecalho}>
+            <Image source={prod1} style={estilos.imgproduto}/>
+            <Text style={estilos.prod1}>Macacão curto <br/>com manga flare</Text>
+        </View>
+
         <View style={estilos.colecao}>
-
-            <View style={estilos.fornecedor}>
-            <Image source={logo} style={estilos.imgproduto}/>
-            </View>
-
             <Text style={estilos.nome}>OF TRANCE</Text>
             <Text>- Roupas a pronta entrega e encomendas</Text>
             <Text>- Entregas no metrô & correios</Text>
             <Text style={estilos.preco}>R$100,00</Text>
-
         </View>
     </>
 }
 
 const estilos = StyleSheet.create({
+    prod1: {
+        lineHeight: 50,
+        marginLeft: 20,
+    },
     imgproduto: {
-
+        width: 90,
+        height: 90,
+    },
+    logo: {
+        width: 200,
+        height: 150,
+    },
+    cabecalho: {
+        flexDirection: 'row'
     },
     preco:{
         color: '#191970',
