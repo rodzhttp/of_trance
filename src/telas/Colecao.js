@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, Image, Dimensions, View } from 'react-native';
-import topo from '../../assets/topo.png';
-import logo from '../../assets/logo2.png';
+import { StyleSheet, Image, Dimensions, View } from 'react-native';
+import topo from '../../assets/topo2.png';
 import prod1 from '../../assets/prod1.png';
+import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto.js';
 
 const width = Dimensions.get("screen").width;
 const largura = 720;
@@ -11,70 +11,71 @@ const valor = altura / largura * width;
 
 export default function Colecao(){
     return <> 
-        <Image source={topo} style={estilos.topo} />
-        <Image source={logo} style={estilos.logo}/>
-
-        <Text style={estilos.titulo}>OF TRANCE</Text>
+        <Image source={topo} style={estilos.img_topo} />
 
         <View style={estilos.cabecalho}>
-            <Image source={prod1} style={estilos.imgproduto}/>
-            <Text style={estilos.prod1}>Macacão curto <br/>com manga flare</Text>
+            <Texto style={estilos.titulo}>ॐ RAVESTORE</Texto>
+            <Texto style={estilos.desc}>- Roupas a pronta entrega e encomendas</Texto>
+            <Texto style={estilos.desc}>- Entregas no metrô & correios</Texto>
         </View>
 
         <View style={estilos.colecao}>
-            <Text style={estilos.nome}>OF TRANCE</Text>
-            <Text>- Roupas a pronta entrega e encomendas</Text>
-            <Text>- Entregas no metrô & correios</Text>
-            <Text style={estilos.preco}>R$100,00</Text>
+            <Image source={prod1} style={estilos.imgproduto}/>
+            <Texto style={estilos.prod1}>Macacão curto com manga flare</Texto>         
         </View>
+        <Texto style={estilos.preco1}>R$100,00</Texto>
+        
+
     </>
 }
 
 const estilos = StyleSheet.create({
-    prod1: {
+    preco1:{
+        color: '#4B0082',
+        fontWeight: 'bold',
+        fontSize: 25,
         lineHeight: 50,
-        marginLeft: 20,
+        marginHorizontal: 20
+
+    },
+    prod1: {
+        color: '#4B0082',
+        fontWeight: 'bold',
+        lineHeight: 80,
+
     },
     imgproduto: {
-        width: 90,
-        height: 90,
+        width: 80,
+        height: 80,
+        marginHorizontal: 20,
+        marginVertical: 20
+
     },
-    logo: {
-        width: 200,
-        height: 150,
+    colecao: {
+        flexDirection: 'row',
+
     },
-    cabecalho: {
-        flexDirection: 'row'
+    desc: {
+        fontSize: 16,
+        fontWeight: 'bold'
+
     },
-    preco:{
-        color: '#191970',
-        fontWeight: 'bold',
-        lineHeight: 50,
-    },
-    nome: {
-        color: '#191970',
+    titulo: {
+        color: '#4B0082',
         fontSize: 30,
         fontWeight: 'bold',
         lineHeight: 60,
+        textAlign: 'center'
+
     },
-    colecao:{
+    cabecalho:{
         paddingVertical: 10, //padding de cima e baixo
         paddingHorizontal: 20, //padding dos lados
 
     },
-    topo: {
+    img_topo: {
         width: '100%',
-        height: valor,
-    },
-    titulo: {
-        width: '100%',
-        position: 'absolute',
-        textAlign: 'center',
-        fontSize: 20,
-        lineHeight: 26,
-        color: '#ADD8E6',
-        fontWeight: 'bold',
-        padding: 10,
-    }
+        height: valor
 
+    },
 });
