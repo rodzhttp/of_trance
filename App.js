@@ -7,13 +7,14 @@ export default function App() {
 
   const [fonteCarregada] = useFonts ({ //constante que recebe as fontes
     'MontSerratRegular': Montserrat_400Regular,
-    'MontSerratBold': Montserrat_700Bold
+    'MontSerratBold': Montserrat_700Bold,
   })
 
-  if (!fonteCarregada) {
+  if (!fonteCarregada) { //se a fonte não estiver carregada, ele retorna uma view vazia(tela branca)
     return <View/>; 
   }
 
+  //return do app (principal)
   return <SafeAreaView style={styles.container}> 
           <Colecao />
          </SafeAreaView>; 
