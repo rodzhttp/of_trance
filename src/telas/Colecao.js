@@ -1,9 +1,11 @@
+//importações
 import React from 'react';
 import { StyleSheet, Image, Dimensions, View } from 'react-native';
 import topo from '../../assets/topo2.png';
 import prod1 from '../../assets/prod1.png';
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto.js';
 
+//constante pra receber o tamanho da imagem 
 const width = Dimensions.get("screen").width;
 const largura = 720;
 const altura = 720;
@@ -30,7 +32,7 @@ export default function Colecao(){
 }
 
 const estilos = StyleSheet.create({
-    preco1:{
+    preco1:{ //preço do produto 1
         color: '#4B0082',
         fontWeight: 'bold',
         fontSize: 25,
@@ -38,29 +40,29 @@ const estilos = StyleSheet.create({
         marginHorizontal: 20
 
     },
-    prod1: {
+    prod1: { //produto 1
         color: '#4B0082',
         fontWeight: 'bold',
         lineHeight: 80,
 
     },
-    imgproduto: {
+    imgproduto: { //imagem do produto
         width: 80,
         height: 80,
         marginHorizontal: 20,
         marginVertical: 20
 
     },
-    colecao: {
+    colecao: { //
         flexDirection: 'row',
 
     },
-    desc: {
+    desc: { //descições da loja
         fontSize: 16,
         fontWeight: 'bold'
 
     },
-    titulo: {
+    titulo: { //titulo "ravestore"
         color: '#4B0082',
         fontSize: 30,
         fontWeight: 'bold',
@@ -68,12 +70,12 @@ const estilos = StyleSheet.create({
         textAlign: 'center'
 
     },
-    cabecalho:{
+    cabecalho:{ //cabeçalho inicial
         paddingVertical: 10, //padding de cima e baixo
         paddingHorizontal: 20, //padding dos lados
 
     },
-    img_topo: {
+    img_topo: { //imagem do topo
         width: '100%',
         height: valor
 

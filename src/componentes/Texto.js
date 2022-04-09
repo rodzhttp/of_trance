@@ -7,6 +7,6 @@ export default function Texto({ children, style }) {
 
 const estilos = StyleSheet.create({
     texto: {
-        fontFamily: 'MontSerratRegular',
+        fontFamily: 'MontSerratRegular'
     },
 })
