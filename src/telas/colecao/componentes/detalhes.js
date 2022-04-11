@@ -4,9 +4,9 @@ import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/component
 
 export default function Detalhes () {
     return <>
+
             <Texto style={estilos.desc}>- Roupas a pronta entrega e encomendas</Texto>
             <Texto style={estilos.desc}>- Entregas no metrô & correios</Texto>
-
     </>
 }
 
@@ -16,6 +16,5 @@ const estilos = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold'
 
-    }
-
+    },
 })
