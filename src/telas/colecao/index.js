@@ -1,10 +1,10 @@
-//importações
 import React from 'react';
 import { StyleSheet, Image, View } from 'react-native';
 import prod1 from '../../../assets/prod1.png';
 import prod2 from '../../../assets/prod2.png';
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto.js';
 import Topo from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/colecao/componentes/topo.js'
+import Detalhes from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/colecao/componentes/detalhes.js';
 
 export default function Colecao(){
     return <> 
@@ -12,8 +12,7 @@ export default function Colecao(){
         <Topo/>
 
         <View style={estilos.cabecalho}>
-            <Texto style={estilos.desc}>- Roupas a pronta entrega e encomendas</Texto>
-            <Texto style={estilos.desc}>- Entregas no metrô & correios</Texto>
+            <Detalhes/>
         </View>
 
         <View style={estilos.colecao}>
