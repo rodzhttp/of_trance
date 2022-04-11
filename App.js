@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, View } from 'react-native';
-import Colecao from './src/telas/Colecao';
+import Colecao from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/colecao/index.js';
 import { Montserrat_400Regular, Montserrat_700Bold, useFonts } from '@expo-google-fonts/montserrat';
 
 export default function App() {
