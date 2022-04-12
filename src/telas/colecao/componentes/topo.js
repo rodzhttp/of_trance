@@ -1,7 +1,7 @@
 import React from "react";
+import { StyleSheet, Image, Dimensions } from 'react-native';
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
 import topo from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/topo2.png';
-import { StyleSheet, Image, Dimensions } from 'react-native';
 
 //constante pra receber o tamanho da imagem 
 const width = Dimensions.get("screen").width;
@@ -28,7 +28,8 @@ const estilos = StyleSheet.create({
         fontSize: 30,
         fontWeight: 'bold',
         lineHeight: 60,
-        textAlign: 'center'
+        textAlign: 'center',
+        paddingTop: 18
 
     },
 })

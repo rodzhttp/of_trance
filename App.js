@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, View } from 'react-native';
-import Colecao from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/colecao/index.js';
+import Index from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/colecao/index.js';
 import { Montserrat_400Regular, Montserrat_700Bold, useFonts } from '@expo-google-fonts/montserrat';
+import mock from './src/mocks/colecao' //recebendo os dados do mock
 
 export default function App() {
 
@@ -16,7 +17,7 @@ export default function App() {
 
   //return do app (principal)
   return <SafeAreaView style={styles.container}> 
-          <Colecao />
+          <Index />
          </SafeAreaView>; 
 }
 

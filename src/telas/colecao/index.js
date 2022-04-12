@@ -8,14 +8,13 @@ import Detalhes from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/
 
 export default function Colecao(){
     return <> 
-
         <Topo/>
-
+        
         <View style={estilos.cabecalho}>
             <Detalhes/>
         </View>
 
-        <View style={estilos.colecao}>
+        {/* <View style={estilos.colecao}>
             <Image source={prod1} style={estilos.imgproduto}/>
             <View style={estilos.colecao2}>
                 <Texto style={estilos.produto}>Macacão curto com manga flare</Texto> 
@@ -35,7 +34,7 @@ export default function Colecao(){
                 <Texto style={estilos.produto}>Macacão curto com manga flare</Texto> 
                 <Texto style={estilos.preco}>R$100,00</Texto>    
             </View>
-        </View>
+        </View> */}
 
     </>
 }
