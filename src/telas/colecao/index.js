@@ -1,17 +1,17 @@
 import React from 'react';
 import { StyleSheet, Image, View } from 'react-native';
-import prod1 from '../../../assets/prod1.png';
-import prod2 from '../../../assets/prod2.png';
-import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto.js';
+// import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto.js';
 import Topo from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/colecao/componentes/topo.js'
 import Detalhes from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/colecao/componentes/detalhes.js';
+import Produtos from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/colecao/componentes/produtos';
 
-export default function Colecao(){
+export default function Colecao({ topo, detalhes, produtos }){
     return <> 
-        <Topo/>
+        <Topo {...topo}/>
         
         <View style={estilos.cabecalho}>
-            <Detalhes/>
+            <Detalhes {...detalhes}/>
+            <Produtos {...produtos}/>
         </View>
 
         {/* <View style={estilos.colecao}>

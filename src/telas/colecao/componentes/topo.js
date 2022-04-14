@@ -9,10 +9,10 @@ const largura = 720;
 const altura = 720;
 const valor = altura / largura * width;
 
-export default function Topo() {
+export default function Topo({ titulo }) {
     return <>
         <Image source={topo} style={estilos.topo} />
-        <Texto style={estilos.titulo}>ॐ RAVESTORE</Texto>
+        <Texto style={estilos.titulo}>{ titulo }</Texto>
         
     </>;
 }

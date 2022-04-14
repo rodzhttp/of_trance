@@ -2,12 +2,12 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto.js';
 
-export default function Detalhes () {
+export default function Detalhes ({desc1, desc2, desc3, desc4}) {
     return <>
-        <Texto style={estilos.desc1}>Confecção à mão | Totalmente singular</Texto>
-        <Texto style={estilos.desc2}>- Roupas a pronta entrega e encomendas</Texto>
-        <Texto style={estilos.desc3}>- Aceitamos cartão |  boleto | TED</Texto>
-        <Texto style={estilos.desc4}>- Entregas no metrô & correios</Texto>
+        <Texto style={estilos.desc1}>{desc1}</Texto>
+        <Texto style={estilos.desc2}>{desc2}</Texto>
+        <Texto style={estilos.desc3}>{desc3}</Texto>
+        <Texto style={estilos.desc4}>{desc4}</Texto>
     </>
 }
 
