@@ -1,6 +1,3 @@
-// import prod1 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod1.png';
-// import prod2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod2.png';
-
 const colecao  = {
     topo: {
         titulo: 'ॐ RAVESTORE TESTE'
@@ -16,11 +13,9 @@ const colecao  = {
         produtos: [
             { 
                 nome: 'macacão1', 
-                // imagem: prod1
             },
             {
                 nome: 'macacão2', 
-                // imagem: prod2
             },
         ]
     }
