@@ -13,20 +13,8 @@ export default function Colecao({ topo, detalhes, produtos }){
         <View style={estilos.cabecalho}>
             <Detalhes {...detalhes}/>
             <Produtos {...produtos}/>
+            
         </View>
-
-        <ScrollView>
-        <Texto>LANÇAMENTOS</Texto>
-
-        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-
-            <View style={{ width: 60, height: 50, backgroundColor: 'blue' }}></View>
-            <View style={{ width: 60, height: 50, backgroundColor: 'blue' }}></View>
-                
-
-        </View>
-
-        </ScrollView>
 
     </>
 }

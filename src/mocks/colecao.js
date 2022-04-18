@@ -9,16 +9,16 @@ const colecao  = {
         desc4: '- Entregas no metrô & correios'
     },
     produtos: {
-        titulo2: 'Produtos à venda',
-        produtos: [
+        titulo: 'Produto:',
+        lista: [
             { 
-                nome: 'macacão1', 
+                nome: 'produto 1', 
             },
             {
-                nome: 'macacão2', 
+                nome: 'produto 2', 
             },
         ]
-    }
+    },
 };
 
 export default colecao;
