@@ -1,8 +1,7 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, View } from 'react-native';
+import { View } from 'react-native';
 import { Montserrat_400Regular, Montserrat_700Bold, useFonts } from '@expo-google-fonts/montserrat';
-import Colecao  from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/colecao/index.js';
-import mock from './src/mocks/colecao' //recebendo os dados do mock
+import Colecao  from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/Home/index.js';
 import { NavigationContainer } from '@react-navigation/native'
 import Routes from './src/routes';
 
