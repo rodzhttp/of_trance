@@ -1,6 +1,6 @@
 import React from "react";
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
-import { StyleSheet, Image, View, Dimensions } from 'react-native';
+import { StyleSheet, Image, View, Dimensions, TouchableOpacity } from 'react-native';
 import img from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod1.png';
 import img2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod2.png';
 import img3 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod3.png';
@@ -20,21 +20,25 @@ export default function Produtos(){
         <Texto style={estilos.desc2}>- Entregas no metrô & correios</Texto>
 
         <View style={estilos.cabecalho}>
+            
         
         <Texto style={estilos.promotitulo}>PROMOÇÕES</Texto>
 
+        <TouchableOpacity>
             <Image source={img} style={estilos.img}/>
             <Texto style={estilos.promo}>Macacão curto com manga flare verde</Texto>
             <Texto style={estilos.preco}>APENAS R$85</Texto>
-
+        </TouchableOpacity>
+        <TouchableOpacity>
             <Image source={img2} style={estilos.img}/>
             <Texto style={estilos.promo}>Macacão curto com manga flare preto</Texto>
             <Texto style={estilos.preco}>APENAS R$85</Texto>
-
+        </TouchableOpacity>
+        <TouchableOpacity>
             <Image source={img3} style={estilos.img}/>
             <Texto style={estilos.promo}>Cropped corselet tomara que caia</Texto>
             <Texto style={estilos.preco}>APENAS R$45</Texto>
-
+        </TouchableOpacity>
 
         </View>
     
