@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto.js';
+import { StyleSheet } from 'react-native';
 
 export default function Detalhes ({desc1, desc2, desc3, desc4}) {
     return <>

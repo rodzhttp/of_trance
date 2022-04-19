@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, View } from 'react-native';
-import Colecao from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/colecao/index.js';
 import { Montserrat_400Regular, Montserrat_700Bold, useFonts } from '@expo-google-fonts/montserrat';
+import Colecao  from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/colecao/index.js';
 import mock from './src/mocks/colecao' //recebendo os dados do mock
+import { NavigationContainer } from '@react-navigation/native'
+import Routes from './src/routes';
 
 export default function App() {
 
@@ -10,21 +12,13 @@ export default function App() {
     'MontSerratRegular': Montserrat_400Regular,
     'MontSerratBold': Montserrat_700Bold,
   })
-
+  
   if (!fonteCarregada) { //se a fonte não estiver carregada, ele retorna uma view vazia(tela branca)
     return <View/>; 
   }
 
   //return do app (principal)
-  return <SafeAreaView style={styles.container}> 
-          <Colecao {...mock} />
-         </SafeAreaView>; 
+  return <> <NavigationContainer>  
+    <Routes />
+  </NavigationContainer> </>
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F0FFFF',
-
-  },
-});

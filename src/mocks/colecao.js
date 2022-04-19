@@ -13,9 +13,11 @@ const colecao  = {
         lista: [
             { 
                 nome: 'produto 1', 
+                sla: 'kk'
             },
             {
                 nome: 'produto 2', 
+                sla: 'kkk'
             },
         ]
     },

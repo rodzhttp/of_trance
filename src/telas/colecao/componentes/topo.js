@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, Image, Dimensions } from 'react-native';
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
+import { StyleSheet, Image, Dimensions } from 'react-native';
 import topo from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/topo2.png';
 
 //constante pra receber o tamanho da imagem 
