@@ -3,6 +3,8 @@ import { View, ScrollView, StyleSheet } from 'react-native';
 import Topo from './componentes/topo'
 import Promo from './componentes/promo';
 
+
+
 export default function Colecao(){
     return <> 
 

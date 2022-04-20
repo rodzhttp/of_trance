@@ -5,7 +5,7 @@ import topo from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/topo2.p
 //constante pra receber o tamanho da imagem 
 const width = Dimensions.get("screen").width;
 const largura = 720;
-const altura = 520;
+const altura = 480;
 const valor = altura / largura * width;
 
 export default function Topo() {
@@ -18,6 +18,8 @@ export default function Topo() {
 const estilos = StyleSheet.create({
     topo: { //imagem do topo
         width: '100%',
-        height: valor
+        height: valor,
+        borderBottomWidth: 6,
+        borderBottomColor: '#3B0066'
     },
 })
