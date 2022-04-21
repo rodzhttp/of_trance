@@ -1,5 +1,6 @@
 import React from "react";
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
+import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
 import { StyleSheet, Image, View, Dimensions, ScrollView } from 'react-native';
 import Prod2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/Produtos/componentes/prod2'
 
@@ -12,7 +13,7 @@ export default function Produtos(){
     return <>
         <ScrollView style={estilos.prodback}>
 
-        <Texto style={estilos.loja}>Loja</Texto>
+        <Texto2 style={estilos.loja}>Loja</Texto2>
 
             <View style={estilos.viewprod}>
                 <Prod2/>

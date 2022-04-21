@@ -1,9 +1,11 @@
 import React from "react";
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
+import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
 import { StyleSheet, Image, View, Dimensions, TouchableOpacity } from 'react-native';
 import img from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod1.png';
 import img2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod2.png';
 import img3 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod3.png';
+
 
 const width = Dimensions.get("screen").width;
 const largura = 720;
@@ -12,7 +14,7 @@ const valor = altura / largura * width;
 
 export default function Produtos(){
     return <>
-        <Texto style={estilos.titulo}>ॐ RAVESTORE</Texto>
+        <Texto2 style={estilos.titulo}>ॐ RAVESTORE</Texto2>
 
         <Texto style={estilos.desc1}>Confecção à mão | Totalmente singular</Texto>
         <Texto style={estilos.desc2}>- Roupas a pronta entrega e encomendas</Texto>
@@ -22,7 +24,7 @@ export default function Produtos(){
         <View style={estilos.cabecalho}>
             
         
-        <Texto style={estilos.promotitulo}>PROMOÇÕES</Texto>
+        <Texto2 style={estilos.promotitulo}>PROMOÇÕES</Texto2>
 
         <TouchableOpacity>
             <Image source={img3} style={estilos.img}/>
@@ -54,9 +56,9 @@ const estilos = StyleSheet.create({
     promotitulo: {
         color: '#8B008B',
         fontWeight: 'bold',
-        fontSize: 20,
+        fontSize: 25,
         textAlign: 'center',
-        paddingVertical: 15 
+        paddingVertical: 10 
     },
     img: {
         width: '100%',
@@ -93,9 +95,8 @@ const estilos = StyleSheet.create({
         color: '#4B0082',
         fontSize: 30,
         fontWeight: 'bold',
-        lineHeight: 60,
         textAlign: 'center',
-        paddingTop: 18
+        paddingVertical: 15
 
     },
     desc1: { //descições da loja
@@ -109,5 +110,11 @@ const estilos = StyleSheet.create({
         fontSize: 14,
         fontWeight: 'bold',
         textAlign: 'center',
-    }
+    },
+    desc3: { //descições da loja
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    
 })
