@@ -11,7 +11,7 @@ export default function Produtos(){
         <Texto2 style={estilos.sobre}> Sobre </Texto2>
 
         <View style={estilos.insta} >
-        <Texto style={estilos.instauser}>@_oftrance</Texto>
+        <Texto style={estilos.instauser}>@oftrance_</Texto>
         <Image source={instalogo} style={estilos.instalogo} />
         </View>
 

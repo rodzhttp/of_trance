@@ -16,7 +16,8 @@ export default function Produtos(){
     return <>
         <Texto2 style={estilos.titulo}>ॐ RAVESTORE</Texto2>
 
-        <Texto style={estilos.desc1}>Confecção à mão | Totalmente singular</Texto>
+        <Texto style={estilos.desc1}>Confecção à mão<br/>Totalmente singular</Texto>
+        <Texto style={estilos.desc1}></Texto>
         <Texto style={estilos.desc2}>- Roupas a pronta entrega e encomendas</Texto>
         <Texto style={estilos.desc2}>- Aceitamos cartão |  boleto | TED</Texto>
         <Texto style={estilos.desc2}>- Entregas no metrô & correios</Texto>
@@ -93,28 +94,20 @@ const estilos = StyleSheet.create({
     // TOPO
     titulo: { //titulo "ravestore"
         color: '#4B0082',
-        fontSize: 30,
+        fontSize: 35,
         fontWeight: 'bold',
         textAlign: 'center',
-        paddingVertical: 15
-
+        paddingVertical: 13
     },
     desc1: { //descições da loja
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        paddingBottom: 10,
+    },
+    desc2: { //descições da loja
         fontSize: 16,
         fontWeight: 'bold',
         textAlign: 'center',
-        paddingBottom: 15,
-
-    },
-    desc2: { //descições da loja
-        fontSize: 14,
-        fontWeight: 'bold',
-        textAlign: 'center',
-    },
-    desc3: { //descições da loja
-        fontSize: 20,
-        fontWeight: 'bold',
-        textAlign: 'center',
-    },
-    
+    }, 
 })
