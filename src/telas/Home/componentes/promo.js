@@ -28,20 +28,20 @@ export default function Produtos(){
         <Texto2 style={estilos.promotitulo}>PROMOÇÕES</Texto2>
 
         <TouchableOpacity>
-            <Image source={img3} style={estilos.img}/>
-            <Texto style={estilos.promo}>Cropped corselet tomara que caia</Texto>
-            <Texto style={estilos.preco}>APENAS R$45</Texto>
+            <Image source={img} style={estilos.img}/>
         </TouchableOpacity>
+            <Texto style={estilos.promo}>Macacão curto com manga flare verde</Texto>
+            <Texto style={estilos.preco}>APENAS R$45</Texto>
         <TouchableOpacity>
             <Image source={img2} style={estilos.img}/>
+        </TouchableOpacity>
             <Texto style={estilos.promo}>Macacão curto com manga flare preto</Texto>
             <Texto style={estilos.preco}>APENAS R$85</Texto>
-        </TouchableOpacity>
         <TouchableOpacity>
-            <Image source={img} style={estilos.img}/>
-            <Texto style={estilos.promo}>Macacão curto com manga flare verde</Texto>
-            <Texto style={estilos.preco}>APENAS R$85</Texto>
+            <Image source={img3} style={estilos.img}/>
         </TouchableOpacity>
+            <Texto style={estilos.promo}>Cropped corselet tomara que caia</Texto>
+            <Texto style={estilos.preco}>APENAS R$85</Texto>
 
         </View>
     
