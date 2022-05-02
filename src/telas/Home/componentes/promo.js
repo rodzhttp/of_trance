@@ -31,7 +31,7 @@ export default function Produtos(){
             <Image source={img} style={estilos.img}/>
         </TouchableOpacity>
             <Texto style={estilos.promo}>Macacão curto com manga flare verde</Texto>
-            <Texto style={estilos.preco}>APENAS R$45</Texto>
+            <Texto style={estilos.preco}>APENAS R$85</Texto>
         <TouchableOpacity>
             <Image source={img2} style={estilos.img}/>
         </TouchableOpacity>
@@ -41,7 +41,7 @@ export default function Produtos(){
             <Image source={img3} style={estilos.img}/>
         </TouchableOpacity>
             <Texto style={estilos.promo}>Cropped corselet tomara que caia</Texto>
-            <Texto style={estilos.preco}>APENAS R$85</Texto>
+            <Texto style={estilos.preco}>APENAS R$45</Texto>
 
         </View>
     
