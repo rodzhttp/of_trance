@@ -37,11 +37,15 @@ export default function Produtos(){
             <View style={estilos.viewprod}>
             <TouchableOpacity>
                 <Image source={img3} style={estilos.img}/>
-                <Texto style={estilos.prec}>PRODUTO 3</Texto>
+                <Texto style={estilos.desc}>Cropped corselet </Texto>
+                <Texto style={estilos.desc}>tomara que caia azul </Texto>
+                <Texto style={estilos.prec}>APENAS R$45</Texto>
             </TouchableOpacity>
             <TouchableOpacity>
                 <Image source={img4} style={estilos.img}/>
-                <Texto style={estilos.prec}>PRODUTO 4</Texto>
+                <Texto style={estilos.desc}>Cropped corselet </Texto>
+                <Texto style={estilos.desc}>tomara que caia rosa </Texto>
+                <Texto style={estilos.prec}>APENAS R$45</Texto>
             </TouchableOpacity>
             </View>
             
@@ -89,17 +93,20 @@ const estilos = StyleSheet.create({
     },
 
     prec: {
-        lineHeight: 25,
-        fontSize: 15,
+        lineHeight: 45,
+        fontSize: 20,
         fontWeight: 'bold',
-        color: '#4B0082',
+        // color: '#4B0082',
+        backgroundColor: '#FFF0F5',
+        marginVertical: 8,
+        borderRadius: 7
     },
 
     desc: {
-        lineHeight: 10,
+        lineHeight: 5,
         fontSize: 14,
         padding: 4,
-        paddingTop: 7,
+        paddingTop: 12,
         fontWeight: 'bold',
     },
 
