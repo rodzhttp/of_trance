@@ -22,46 +22,48 @@ export default function Produtos(){
             <View style={estilos.viewprod}>
             <TouchableOpacity>
                 <Image source={img} style={estilos.img}/>
-                <Texto style={estilos.prod}>PRODUTO</Texto>
-                <Texto style={estilos.desc}>descriçaum do produtu</Texto>
+                <Texto style={estilos.prec}>PRODUTO</Texto>
+                <Texto style={estilos.desc}>Macacão curto com  </Texto>
+                <Texto style={estilos.desc}>manga flare verde </Texto>
             </TouchableOpacity>
             <TouchableOpacity>
                 <Image source={img2} style={estilos.img}/>
-                <Texto style={estilos.prod}>PRODUTO 2</Texto>
-                <Texto style={estilos.desc}>descriçaum do produtu</Texto>
+                <Texto style={estilos.prec}>PRODUTO 2</Texto>
+                <Texto style={estilos.desc}>Macacão curto com  </Texto>
+                <Texto style={estilos.desc}>manga flare preto </Texto>
             </TouchableOpacity>
             </View>
 
             <View style={estilos.viewprod}>
             <TouchableOpacity>
                 <Image source={img3} style={estilos.img}/>
-                <Texto style={estilos.prod}>PRODUTO 3</Texto>
+                <Texto style={estilos.prec}>PRODUTO 3</Texto>
             </TouchableOpacity>
             <TouchableOpacity>
                 <Image source={img4} style={estilos.img}/>
-                <Texto style={estilos.prod}>PRODUTO 4</Texto>
+                <Texto style={estilos.prec}>PRODUTO 4</Texto>
             </TouchableOpacity>
             </View>
             
             <View style={estilos.viewprod}>
             <TouchableOpacity>
                 <Image source={img5} style={estilos.img}/>
-                <Texto style={estilos.prod}>PRODUTO 5</Texto>
+                <Texto style={estilos.prec}>PRODUTO 5</Texto>
             </TouchableOpacity>
             <TouchableOpacity>
                 <Image source={img6} style={estilos.img}/>
-                <Texto style={estilos.prod}>PRODUTO 6</Texto>
+                <Texto style={estilos.prec}>PRODUTO 6</Texto>
             </TouchableOpacity>
             </View>
 
             <View style={estilos.viewprod}>
             <TouchableOpacity>
                 <Image source={img7} style={estilos.img}/>
-                <Texto style={estilos.prod}>PRODUTO 7</Texto>
+                <Texto style={estilos.prec}>PRODUTO 7</Texto>
             </TouchableOpacity>
             <TouchableOpacity>
                 <Image source={img8} style={estilos.img}/>
-                <Texto style={estilos.prod}>PRODUTO 8</Texto>
+                <Texto style={estilos.prec}>PRODUTO 8</Texto>
             </TouchableOpacity>
             </View>
 
@@ -86,15 +88,18 @@ const estilos = StyleSheet.create({
         borderRadius: '10px',
     },
 
-    prod: {
+    prec: {
         lineHeight: 50,
         fontSize: 15,
         fontWeight: 'bold',
+        color: '#4B0082',
     },
 
     desc: {
-        lineHeight: 10,
-        fontSize: 12,
+        lineHeight: 7,
+        fontSize: 14,
+        padding: 4,
+        fontWeight: 'bold',
     },
 
     prodback: {
