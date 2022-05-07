@@ -22,15 +22,15 @@ export default function Produtos(){
             <View style={estilos.viewprod}>
             <TouchableOpacity>
                 <Image source={img} style={estilos.img}/>
-                <Texto style={estilos.prec}>PRODUTO</Texto>
                 <Texto style={estilos.desc}>Macacão curto com  </Texto>
                 <Texto style={estilos.desc}>manga flare verde </Texto>
+                <Texto style={estilos.prec}>APENAS R$85</Texto>
             </TouchableOpacity>
             <TouchableOpacity>
                 <Image source={img2} style={estilos.img}/>
-                <Texto style={estilos.prec}>PRODUTO 2</Texto>
                 <Texto style={estilos.desc}>Macacão curto com  </Texto>
                 <Texto style={estilos.desc}>manga flare preto </Texto>
+                <Texto style={estilos.prec}>APENAS R$85</Texto>
             </TouchableOpacity>
             </View>
 
@@ -89,16 +89,17 @@ const estilos = StyleSheet.create({
     },
 
     prec: {
-        lineHeight: 50,
+        lineHeight: 25,
         fontSize: 15,
         fontWeight: 'bold',
         color: '#4B0082',
     },
 
     desc: {
-        lineHeight: 7,
+        lineHeight: 10,
         fontSize: 14,
         padding: 4,
+        paddingTop: 7,
         fontWeight: 'bold',
     },
 
