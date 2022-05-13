@@ -13,15 +13,13 @@ export default function Routes() {
             screenOptions={{
             tabBarStyle: {
                 height: 60, 
-                backgroundColor: '#E0FFFF', 
+                backgroundColor: '#3B0066', 
                 paddingBottom: 5,
                 paddingTop: 5,
-                borderTopWidth: 6,
-                borderTopColor: '#3B0066',
+                borderTopColor: '#3B0099',
             },
-            tabBarActiveTintColor: '#3B0066',
+            tabBarActiveTintColor: '#F0FFFF',
             tabBarInactiveTintColor: '#BA88D3',
-            
         }}>
             <Tab.Screen 
             name='Home' component={home} options={{headerShown: false,

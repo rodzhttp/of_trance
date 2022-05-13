@@ -2,16 +2,18 @@ import React from "react";
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
 import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
 import instalogo from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/insta.png';
-import { StyleSheet, ScrollView, View, Image } from 'react-native';
+import { StyleSheet, ScrollView, View, Image, Linking } from 'react-native';
 
 
 export default function Produtos(){
     return <>
-        <ScrollView style={estilos.sobreback}>
+        <ScrollView style={estilos.sobreback} >
         <Texto2 style={estilos.sobre}> Sobre </Texto2>
 
         <View style={estilos.insta} >
-        <Texto style={estilos.instauser}>@oftrance_</Texto>
+        <Texto style={estilos.instauser} onPress={() => {
+              Linking.openURL('https://reactnative.dev');
+            }}>@oftrance_</Texto>
         <Image source={instalogo} style={estilos.instalogo} />
         </View>
 
