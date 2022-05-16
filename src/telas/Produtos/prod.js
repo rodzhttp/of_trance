@@ -56,14 +56,12 @@ export default function Produtos(){
             <View style={estilos.viewprod}>
             <TouchableOpacity>
                 <Image source={img5} style={estilos.img}/>
-                <Texto style={estilos.desc}>Cropped com detalhes </Texto>
-                <Texto style={estilos.desc}>no decote e tiras </Texto>
+                <Texto style={estilos.desc}> {filterDesc('Cropped com detalhes no decote e tiras')} </Texto>
                 <Texto style={estilos.prec}>APENAS R$65</Texto>
             </TouchableOpacity>
             <TouchableOpacity>
                 <Image source={img6} style={estilos.img}/>
-                <Texto style={estilos.desc}>conjunto </Texto>
-                <Texto style={estilos.desc}>saia + cropped </Texto>
+                <Texto style={estilos.desc}> {filterDesc('Conjunto saia + cropped')} </Texto>
                 <Texto style={estilos.prec}>APENAS R$65</Texto>
             </TouchableOpacity>
             </View>
@@ -71,14 +69,12 @@ export default function Produtos(){
             <View style={estilos.viewprod}>
             <TouchableOpacity>
                 <Image source={img7} style={estilos.img}/>
-                <Texto style={estilos.desc}>Cropped Tie-Dye </Texto>
-                <Texto style={estilos.desc}>verde água </Texto>
+                <Texto style={estilos.desc}> {filterDesc('Cropped Tie-Dye verde agua')} </Texto>
                 <Texto style={estilos.prec}>APENAS R$65</Texto>
             </TouchableOpacity>
             <TouchableOpacity>
                 <Image source={img8} style={estilos.img}/>
-                <Texto style={estilos.desc}>Macacão tecido</Texto>
-                <Texto style={estilos.desc}>cotton</Texto>
+                <Texto style={estilos.desc}> {filterDesc('Macacão tecido cotton')} </Texto>
                 <Texto style={estilos.prec}>APENAS R$85</Texto>
             </TouchableOpacity>
             </View>
