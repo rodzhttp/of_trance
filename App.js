@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { Montserrat_400Regular, Montserrat_700Bold, useFonts } from '@expo-google-fonts/montserrat';
 import { Kanit_400Regular, Kanit_700Bold } from '@expo-google-fonts/kanit';
-import { NavigationContainer } from '@react-navigation/native'
+
 import Routes from './src/routes';
 
 export default function App() {
@@ -19,7 +19,7 @@ export default function App() {
   }
 
   //return do app (principal)
-  return <> <NavigationContainer>  
+  return <>  
     <Routes />
-  </NavigationContainer> </>
+ </>
 }

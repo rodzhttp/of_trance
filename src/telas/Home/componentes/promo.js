@@ -1,7 +1,9 @@
 import React from "react";
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
 import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
-import { StyleSheet, Image, View, Dimensions, TouchableOpacity } from 'react-native';
+import { StyleSheet, Image, View, Dimensions, TouchableOpacity, onClick } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
+
 import img from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod1.png';
 import img2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod2.png';
 import img3 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod3.png';
@@ -13,6 +15,8 @@ const altura = 520;
 const valor = altura / largura * width;
 
 export default function Produtos(){
+const navigation = useNavigation();
+
     return <>
         <Texto2 style={estilos.titulo}>ॐ RAVESTORE</Texto2>
 
@@ -28,17 +32,17 @@ export default function Produtos(){
         <Texto2 style={estilos.promotitulo}>PROMOÇÕES</Texto2>
 
         <TouchableOpacity>
-            <Image source={img} style={estilos.img}/>
+            <Image source={img} style={estilos.img} onClick={()=> navigation.navigate('Produtos')}/>
         </TouchableOpacity>
             <Texto style={estilos.promo}>Macacão verde com manga flare</Texto>
             <Texto style={estilos.preco}>APENAS R$85</Texto>
         <TouchableOpacity>
-            <Image source={img2} style={estilos.img}/>
+            <Image source={img2} style={estilos.img} onClick={()=> alert('Clicou')}/>
         </TouchableOpacity>
             <Texto style={estilos.promo}>Macacão preto com manga flare</Texto>
             <Texto style={estilos.preco}>APENAS R$85</Texto>
         <TouchableOpacity>
-            <Image source={img3} style={estilos.img}/>
+            <Image source={img3} style={estilos.img} onClick={()=> alert('Clicou')}/>
         </TouchableOpacity>
             <Texto style={estilos.promo}>Cropped azul corselet tomara que caia</Texto>
             <Texto style={estilos.preco}>APENAS R$45</Texto>

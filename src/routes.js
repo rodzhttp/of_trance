@@ -1,14 +1,21 @@
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createStackNavigator } from '@react-navigation/stack'
+import { Entypo } from '@expo/vector-icons'
+
 import home from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/Home/index.js'
 import prod from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/Produtos/prod.js'
 import sobre from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/Sobre/sobre'
-import { Entypo } from '@expo/vector-icons'
+import detalhes from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/Detalhes/detalhes'
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 export default function Routes() {
     return(
+    <NavigationContainer>
+
         <Tab.Navigator 
             screenOptions={{
             tabBarStyle: {
@@ -35,7 +42,12 @@ export default function Routes() {
             name='Sobre' component={sobre} options={{headerShown: false,
             tabBarIcon: ({size, color}) => (
                 <Entypo name='heart' size={size} color={color}/> )}}/>
+
         </Tab.Navigator>
+
+    </NavigationContainer>    
+
+  
     )
 }
 
