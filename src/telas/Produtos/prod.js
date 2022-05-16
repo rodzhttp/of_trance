@@ -14,6 +14,14 @@ import img7 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod7.p
 import img8 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod8.png';
 
 export default function Produtos(){
+
+    function filterDesc(desc) {
+        if(desc.length < 22) {
+            return desc
+        }
+        return `${desc.substring(0, 20)}...`
+    }
+
     return <>
         <ScrollView style={estilos.prodback}>
 
@@ -22,14 +30,12 @@ export default function Produtos(){
             <View style={estilos.viewprod}>
             <TouchableOpacity>
                 <Image source={img} style={estilos.img}/>
-                <Texto style={estilos.desc}>Macacão curto com  </Texto>
-                <Texto style={estilos.desc}>manga flare verde </Texto>
+                <Texto style={estilos.desc}> {filterDesc('Macacão verde com manga flare')} </Texto>
                 <Texto style={estilos.prec}>APENAS R$85</Texto>
             </TouchableOpacity>
             <TouchableOpacity>
                 <Image source={img2} style={estilos.img}/>
-                <Texto style={estilos.desc}>Macacão curto com  </Texto>
-                <Texto style={estilos.desc}>manga flare preto </Texto>
+                <Texto style={estilos.desc}> {filterDesc('Macacão verde com manga preta')} </Texto>
                 <Texto style={estilos.prec}>APENAS R$85</Texto>
             </TouchableOpacity>
             </View>
@@ -37,14 +43,12 @@ export default function Produtos(){
             <View style={estilos.viewprod}>
             <TouchableOpacity>
                 <Image source={img3} style={estilos.img}/>
-                <Texto style={estilos.desc}>Cropped corselet </Texto>
-                <Texto style={estilos.desc}>tomara que caia azul </Texto>
+                <Texto style={estilos.desc}> {filterDesc('Cropped azul corselet tomara que caia')} </Texto>
                 <Texto style={estilos.prec}>APENAS R$45</Texto>
             </TouchableOpacity>
             <TouchableOpacity>
                 <Image source={img4} style={estilos.img}/>
-                <Texto style={estilos.desc}>Cropped corselet </Texto>
-                <Texto style={estilos.desc}>tomara que caia rosa </Texto>
+                <Texto style={estilos.desc}> {filterDesc('Cropped rosa corselet tomara que caia')} </Texto>
                 <Texto style={estilos.prec}>APENAS R$45</Texto>
             </TouchableOpacity>
             </View>
@@ -102,17 +106,17 @@ const estilos = StyleSheet.create({
 
     prec: {
         lineHeight: 45,
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: 'bold',
-        // color: '#4B0082',
+        color: '#4B0082',
         backgroundColor: '#FFF0F5',
-        marginVertical: 8,
+        marginVertical: 7,
         borderRadius: 7
     },
 
     desc: {
         lineHeight: 5,
-        fontSize: 14,
+        fontSize: 12,
         padding: 4,
         paddingTop: 12,
         fontWeight: 'bold',
