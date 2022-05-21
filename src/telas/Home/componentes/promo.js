@@ -1,13 +1,9 @@
-import React from "react";
+import React, {Fragment} from "react";
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
 import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
 import { StyleSheet, Image, View, Dimensions, TouchableOpacity, onClick } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
-
-import img from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod1.png';
-import img2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod2.png';
-import img3 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod3.png';
-
+import products from "../../../utils/products";
 
 const width = Dimensions.get("screen").width;
 const largura = 720;
@@ -27,28 +23,19 @@ const navigation = useNavigation();
         <Texto style={estilos.desc2}>- Entregas no metrô & correios</Texto>
 
         <View style={estilos.cabecalho}>
-            
         
-        <Texto2 style={estilos.promotitulo}>PROMOÇÕES</Texto2>
+            <Texto2 style={estilos.promotitulo}>PROMOÇÕES</Texto2>
 
-        <TouchableOpacity>
-            <Image source={img} style={estilos.img} onClick={()=> navigation.navigate('Produtos')}/>
-        </TouchableOpacity>
-            <Texto style={estilos.promo}>Macacão verde com manga flare</Texto>
-            <Texto style={estilos.preco}>APENAS R$85</Texto>
-        <TouchableOpacity>
-            <Image source={img2} style={estilos.img} onClick={()=> alert('Clicou')}/>
-        </TouchableOpacity>
-            <Texto style={estilos.promo}>Macacão preto com manga flare</Texto>
-            <Texto style={estilos.preco}>APENAS R$85</Texto>
-        <TouchableOpacity>
-            <Image source={img3} style={estilos.img} onClick={()=> alert('Clicou')}/>
-        </TouchableOpacity>
-            <Texto style={estilos.promo}>Cropped azul corselet tomara que caia</Texto>
-            <Texto style={estilos.preco}>APENAS R$45</Texto>
-
+            { products.map( (product) => {
+            return (
+                <Fragment key={product.id}> 
+                    <TouchableOpacity>
+                        <Image source={product.imgUrl} style={estilos.img} onClick={()=> navigation.navigate('Detalhes', {product})}/>
+                    </TouchableOpacity>
+                        <Texto style={estilos.promo}>{product.title}</Texto>
+                        <Texto style={estilos.preco}>APENAS R${product.price}</Texto> 
+                </Fragment> ) } ) }
         </View>
-    
     </>
 }
 
@@ -76,7 +63,6 @@ const estilos = StyleSheet.create({
         fontWeight: 'bold',
         marginTop: 10,
         marginBottom: 10,
-        
     },
     descpromo: {
         fontSize: 14,
@@ -89,11 +75,7 @@ const estilos = StyleSheet.create({
         fontWeight: 'bold',
         paddingVertical: 10,
         paddingBottom: 50,
-
     },
-
-
-
 
     // TOPO
     titulo: { //titulo "ravestore"

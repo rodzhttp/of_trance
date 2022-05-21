@@ -12,6 +12,22 @@ import detalhes from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
+const ProductStackNavigator = () => {
+    return (
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name='Produtos' component={prod}/>
+        <Stack.Screen name='Detalhes' component={detalhes}/>
+    </Stack.Navigator> 
+)}
+
+const HomeStackNavigator = () => {
+    return (
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name='Home' component={home}/>
+        <Stack.Screen name='Detalhes' component={detalhes}/>
+    </Stack.Navigator> 
+)}
+
 export default function Routes() {
     return(
     <NavigationContainer>
@@ -29,12 +45,12 @@ export default function Routes() {
             tabBarInactiveTintColor: '#BA88D3',
         }}>
             <Tab.Screen 
-            name='Home' component={home} options={{headerShown: false,
+            name='Home' component={HomeStackNavigator} options={{headerShown: false,
             tabBarIcon: ({size, color}) => (
                 <Entypo name='home' size={size} color={color}/> )}}/>
 
             <Tab.Screen 
-            name='Produtos' component={prod} options={{headerShown: false,
+            name='Produtos' component={ProductStackNavigator} options={{headerShown: false,
             tabBarIcon: ({size, color}) => (
                 <Entypo name='feather' size={size} color={color}/> )}}/>
 
@@ -44,10 +60,6 @@ export default function Routes() {
                 <Entypo name='heart' size={size} color={color}/> )}}/>
 
         </Tab.Navigator>
-
     </NavigationContainer>    
-
-  
-    )
-}
+)}
 
