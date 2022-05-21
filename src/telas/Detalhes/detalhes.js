@@ -11,7 +11,7 @@ export default function Detalhes({route}){
 
             <Image source={product.imgUrl} style={estilos.img}/>
             <Texto2 style={estilos.descc}>{product.title}</Texto2>
-            <Texto2 style={}>APENAS R${product.price}</Texto2>
+            <Texto2 style={estilos.preco}>APENAS R${product.price}</Texto2>
             
         </ScrollView> 
     </>

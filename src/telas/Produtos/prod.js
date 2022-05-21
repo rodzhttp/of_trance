@@ -1,7 +1,8 @@
-import React from "react";
+import React, {Fragment} from "react";
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
 import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
-import { StyleSheet, Image, View, ScrollView, TouchableOpacity } from 'react-native';
+import products from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/utils/products.js'
+import { StyleSheet, Image, View, ScrollView, TouchableOpacity, onClick } from 'react-native';
 
 //imagens dos produtos
 import img from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod1.png';
@@ -27,57 +28,27 @@ export default function Produtos(){
 
             <Texto2 style={estilos.loja}>Loja</Texto2>
 
-            <View style={estilos.viewprod}>
-            <TouchableOpacity>
-                <Image source={img} style={estilos.img}/>
-                <Texto style={estilos.desc}> {filterDesc('Macacão verde com manga flare')} </Texto>
-                <Texto style={estilos.prec}>APENAS R$85</Texto>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <Image source={img2} style={estilos.img}/>
-                <Texto style={estilos.desc}> {filterDesc('Macacão verde com manga preta')} </Texto>
-                <Texto style={estilos.prec}>APENAS R$85</Texto>
-            </TouchableOpacity>
-            </View>
+            { products.map( (product) => {
+            return (
+                <Fragment key={product.id}> 
+                    <View style={estilos.viewprod}>
+                        <TouchableOpacity>
+                            <Image source={product.imgUrl} style={estilos.img}
+                            onClick={()=> navigation.navigate('Detalhes', {product})}/>
+                            <Texto style={estilos.title}> {filterDesc('Macacão verde com manga preta')} </Texto>
+                            <Texto style={estilos.price}>APENAS R${product.price}</Texto>
+                        </TouchableOpacity> 
+                        
+                    </View> 
 
-            <View style={estilos.viewprod}>
-            <TouchableOpacity>
-                <Image source={img3} style={estilos.img}/>
-                <Texto style={estilos.desc}> {filterDesc('Cropped azul corselet tomara que caia')} </Texto>
-                <Texto style={estilos.prec}>APENAS R$45</Texto>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <Image source={img4} style={estilos.img}/>
-                <Texto style={estilos.desc}> {filterDesc('Cropped rosa corselet tomara que caia')} </Texto>
-                <Texto style={estilos.prec}>APENAS R$45</Texto>
-            </TouchableOpacity>
-            </View>
+                    
+
+                </Fragment> ) } ) }
+
+
+
+
             
-            <View style={estilos.viewprod}>
-            <TouchableOpacity>
-                <Image source={img5} style={estilos.img}/>
-                <Texto style={estilos.desc}> {filterDesc('Cropped com detalhes no decote e tiras')} </Texto>
-                <Texto style={estilos.prec}>APENAS R$65</Texto>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <Image source={img6} style={estilos.img}/>
-                <Texto style={estilos.desc}> {filterDesc('Conjunto saia + cropped')} </Texto>
-                <Texto style={estilos.prec}>APENAS R$65</Texto>
-            </TouchableOpacity>
-            </View>
-
-            <View style={estilos.viewprod}>
-            <TouchableOpacity>
-                <Image source={img7} style={estilos.img}/>
-                <Texto style={estilos.desc}> {filterDesc('Cropped Tie-Dye verde agua')} </Texto>
-                <Texto style={estilos.prec}>APENAS R$65</Texto>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <Image source={img8} style={estilos.img}/>
-                <Texto style={estilos.desc}> {filterDesc('Macacão tecido cotton')} </Texto>
-                <Texto style={estilos.prec}>APENAS R$85</Texto>
-            </TouchableOpacity>
-            </View>
 
         </ScrollView>
         
@@ -100,7 +71,7 @@ const estilos = StyleSheet.create({
         borderRadius: '10px',
     },
 
-    prec: {
+    price: {
         lineHeight: 45,
         fontSize: 18,
         fontWeight: 'bold',
@@ -110,7 +81,7 @@ const estilos = StyleSheet.create({
         borderRadius: 7
     },
 
-    desc: {
+    title: {
         lineHeight: 5,
         fontSize: 12,
         padding: 4,
