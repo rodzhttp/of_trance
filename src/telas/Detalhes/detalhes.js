@@ -1,46 +1,60 @@
 import React from "react";
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
 import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
-import { StyleSheet, ScrollView, Image } from 'react-native';
+import { StyleSheet, ScrollView, Image, Dimensions, View } from 'react-native';
 
+const width = Dimensions.get("screen").width;
+const largura = 720;
+const altura = 520;
+const valor = altura / largura * width;
 
 export default function Detalhes({route}){
-    const {product} = route.params
+    const {promotion} = route.params
     return <>
-        <ScrollView style={estilos.cabecalho} >
+        <ScrollView style={estilos.background} >
 
-            <Image source={product.imgUrl} style={estilos.img}/>
-            <Texto2 style={estilos.descc}>{product.title}</Texto2>
-            <Texto2 style={estilos.preco}>APENAS R${product.price}</Texto2>
-            
+            <Image source={promotion.imgUrl} style={estilos.img}/>
+            <Texto style={estilos.promo}>{promotion.title}</Texto>
+            <Texto2 style={estilos.price}>DE R${promotion.price}</Texto2> 
+            <Texto2 style={estilos.price2}>POR APENAS R${promotion.price2}</Texto2> 
+            <Texto2 style={estilos.desc}>{promotion.desc}</Texto2>
+
         </ScrollView> 
     </>
 }
 
 const estilos = StyleSheet.create({
-    cabecalho: {
-        paddingHorizontal: 35,
+    background: {
+        paddingHorizontal: 20,
         marginVertical: 10,
+        backgroundColor: '#F0FFFF',
     },
     img: {
         width: '100%',
-        height: 250,
+        height: valor,
         marginVertical: 10,
-        marginHorizontal: '',
-        borderRadius: '20px',
-        textAlign: 'center'
+        borderRadius: '20px'
     },
-    descc: {
-        fontSize: 18,
+    promo: {
+        fontSize: 19,
         fontWeight: 'bold',
-        textAlign: 'center',
-        paddingBottom: 10,
+        marginVertical: 8,
     },
-    preco: {
-        color: '#4B0082',
+    price: {
+        color: '#DC143C',
+        fontSize: 23,
+        fontWeight: 'bold',
+    },
+    price2: {
+        color: '#008000',
+        fontSize: 25,
+        fontWeight: 'bold',
+    },
+    desc: {
         fontSize: 20,
-        fontWeight: 'bold',
-        paddingVertical: 10,
-        paddingBottom: 50,
-    },
+        marginVertical: 8,
+        backgroundColor: '#FFE4E1',
+        padding: 8,
+        borderRadius: '10px'
+    }
 })

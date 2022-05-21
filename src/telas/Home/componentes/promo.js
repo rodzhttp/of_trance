@@ -3,37 +3,42 @@ import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/component
 import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
 import { StyleSheet, Image, View, Dimensions, TouchableOpacity, onClick } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
-import products from "../../../utils/products";
+import promotions from "../../../utils/promotions";
 
 const width = Dimensions.get("screen").width;
 const largura = 720;
 const altura = 520;
 const valor = altura / largura * width;
 
-export default function Produtos(){
+export default function Promo(){
 const navigation = useNavigation();
 
     return <>
         <Texto2 style={estilos.titulo}>ॐ RAVESTORE</Texto2>
-
         <Texto style={estilos.desc1}>Confecção à mão<br/>Totalmente singular</Texto>
         <Texto style={estilos.desc1}></Texto>
         <Texto style={estilos.desc2}>- Roupas a pronta entrega e encomendas</Texto>
         <Texto style={estilos.desc2}>- Aceitamos cartão |  boleto | TED</Texto>
         <Texto style={estilos.desc2}>- Entregas no metrô & correios</Texto>
 
-        <View style={estilos.cabecalho}>
+        <View style={estilos.background}>
         
-            <Texto2 style={estilos.promotitulo}>PROMOÇÕES</Texto2>
+        <Texto2 style={estilos.promotitulo}>PROMOÇÕES</Texto2>
 
-            { products.map( (product) => {
-            return (
-                <Fragment key={product.id}> 
+            { promotions.map( (promotion) => { return (
+
+                <Fragment key={promotion.id}> 
+                
                     <TouchableOpacity>
-                        <Image source={product.imgUrl} style={estilos.img} onClick={()=> navigation.navigate('Detalhes', {product})}/>
+                        <Image source={promotion.imgUrl} style={estilos.img} 
+                        onClick={()=> navigation.navigate('Detalhes', {promotion})}/>
                     </TouchableOpacity>
-                        <Texto style={estilos.promo}>{product.title}</Texto>
-                        <Texto style={estilos.preco}>APENAS R${product.price}</Texto> 
+                    <View style={estilos.packprod}>
+                        <Texto style={estilos.promo}>{promotion.title}</Texto>
+                        <Texto2 style={estilos.price}>DE R${promotion.price}</Texto2> 
+                        <Texto2 style={estilos.price2}>POR APENAS R${promotion.price2}</Texto2> 
+                    </View>
+                    
                 </Fragment> ) } ) }
         </View>
     </>
@@ -41,16 +46,9 @@ const navigation = useNavigation();
 
 const estilos = StyleSheet.create({
     // PROMOÇÕES
-    cabecalho: {
+    background: {
         paddingHorizontal: 20,
         marginVertical: 10,
-    },
-    promotitulo: {
-        color: '#8B008B',
-        fontWeight: 'bold',
-        fontSize: 25,
-        textAlign: 'center',
-        paddingVertical: 10 
     },
     img: {
         width: '100%',
@@ -59,27 +57,28 @@ const estilos = StyleSheet.create({
         borderRadius: '20px'
     },
     promo:{
-        fontSize: 16,
+        fontSize: 19,
         fontWeight: 'bold',
-        marginTop: 10,
-        marginBottom: 10,
+        marginVertical: 8,
     },
-    descpromo: {
-        fontSize: 14,
+    price: {
+        color: '#DC143C',
+        fontSize: 23,
         fontWeight: 'bold',
-        lineHeight: 20
     },
-    preco: {
-        color: '#4B0082',
-        fontSize: 20,
+    price2: {
+        color: '#008000',
+        fontSize: 25,
         fontWeight: 'bold',
-        paddingVertical: 10,
-        paddingBottom: 50,
+    },
+    packprod: {
+        marginBottom: 20,
+        borderRadius: 7
     },
 
     // TOPO
     titulo: { //titulo "ravestore"
-        color: '#4B0082',
+        color: '#8B008B',
         fontSize: 35,
         fontWeight: 'bold',
         textAlign: 'center',
@@ -95,5 +94,12 @@ const estilos = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         textAlign: 'center',
-    }, 
+    },
+    promotitulo: {
+        color: '#4B0082',
+        fontWeight: 'bold',
+        fontSize: 25,
+        textAlign: 'center',
+        paddingVertical: 10 
+    },
 })
