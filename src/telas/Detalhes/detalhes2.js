@@ -1,8 +1,7 @@
 import React from "react";
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
-import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
-import { StyleSheet, ScrollView, Image, Dimensions, onClick } from 'react-native';
-import { TouchableOpacity } from "react-native-web";
+// import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
+import { StyleSheet, ScrollView, Image, Dimensions, View } from 'react-native';
 
 const width = Dimensions.get("screen").width;
 const largura = 720;
@@ -10,18 +9,13 @@ const altura = 520;
 const valor = altura / largura * width;
 
 export default function Detalhes({route}){
-    const {promotion} = route.params
+    const {product} = route.params
     return <>
         <ScrollView style={estilos.background} >
 
-            <Image source={promotion.imgUrl} style={estilos.img}/>
-            <Texto style={estilos.promo}>{promotion.title}</Texto>
-            <Texto2 style={estilos.price}>DE R${promotion.price}</Texto2> 
-            <Texto2 style={estilos.price2}>POR APENAS R${promotion.price2}</Texto2> 
-            <Texto2 style={estilos.desc}>{promotion.desc}</Texto2>
-            <TouchableOpacity >
-                <Texto style={estilos.botao}>Comprar</Texto>
-            </TouchableOpacity>
+
+            <Texto>{product.title}</Texto>
+
 
         </ScrollView> 
     </>
@@ -60,12 +54,5 @@ const estilos = StyleSheet.create({
         backgroundColor: '#FFE4E1',
         padding: 8,
         borderRadius: '10px'
-    },
-    botao: {
-        backgroundColor: '#008000',
-        textAlign: 'center',
-        color: 'white',
-        fontSize: 25,
-        fontWeight: 'bold'
     }
 })
