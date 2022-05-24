@@ -1,7 +1,7 @@
 import React, {Fragment} from "react";
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
 import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
-import products from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/utils/products.js'
+import promotions from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/utils/products.js'
 import { StyleSheet, Image, View, ScrollView, TouchableOpacity, Dimensions } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 
@@ -17,20 +17,21 @@ const navigation = useNavigation();
     return <>
         <ScrollView style={estilos.prodback}>
             <Texto2 style={estilos.loja}>Loja</Texto2>
-            { products.map( (product) => { return (
+            { promotions.map( (promotion) => { return (
 
-                <Fragment key={product.id}> 
+            <Fragment key={promotion.id}> 
 
-                    <View style={estilos.background}>
-                    <TouchableOpacity>
-                        <Image source={product.imgUrl} style={estilos.img}
-                        onClick={()=> navigation.navigate('Detalhes2', {product})}/>
-                    </TouchableOpacity> 
-                        <Texto style={estilos.prod}>{product.title}</Texto>
-                        <Texto2 style={estilos.price}>APENAS R${product.price}</Texto2>
-                    </View> 
-
-                </Fragment> ) } ) }
+                <TouchableOpacity>
+                    <Image source={promotion.imgUrl} style={estilos.img} 
+                    onClick={()=> navigation.navigate('Detalhes', {promotion})}/>
+                </TouchableOpacity>
+                <View style={estilos.packprod}>
+                    <Texto style={estilos.promo}>{promotion.title}</Texto>
+                    <Texto2 style={estilos.price}>DE R${promotion.price}</Texto2> 
+                    <Texto2 style={estilos.price2}>POR APENAS R${promotion.price2}</Texto2> 
+                </View>
+                
+            </Fragment> ) } ) }
         </ScrollView>    
     </> 
 }

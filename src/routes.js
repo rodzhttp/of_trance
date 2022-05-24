@@ -8,7 +8,6 @@ import home from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/Home
 import prod from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/Produtos/prod.js'
 import sobre from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/Sobre/sobre'
 import detalhes from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/Detalhes/detalhes'
-import detalhes2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/telas/Detalhes/detalhes2'
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -25,7 +24,7 @@ const ProductStackNavigator = () => {
     return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name='Produtos' component={prod}/>
-        <Stack.Screen name='Detalhes2' component={detalhes2}/>
+        <Stack.Screen name='Detalhes' component={detalhes}/>
     </Stack.Navigator> 
 )}
 
