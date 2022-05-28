@@ -34,31 +34,41 @@ const products = [
     },
     {
         title: 'Cropped rosa corselet tomara que caia',
-        price: 65,
+        desc: 'Feito sob medida e por encomenda, todos os tamanhos e cores.',
+        price: 70,
+        price2: 55,
         imgUrl: img4,
         id: 4
     },
     {
-        title: 'Cropped rosa corselet tomara que caia',
-        price: 65,
+        title: 'Conjunto cropped faixas & saia Tie-Dye',
+        desc: 'Cropped faixa com detalhes no decote e tiras para diferentes amarrações. Saia de pontas tie dye, disponível na cor que desejar. Feito sob medida e por encomenda, todos os tamanhos e cores.',
+        price: 90,
+        price2: 65,
         imgUrl: img5,
         id: 5
     },
     {
-        title: 'Cropped rosa corselet tomara que caia',
-        price: 65,
+        title: 'Conjunto cropped & saia dois tons de verde',
+        desc: 'Tecido maleável, ajustável ao corpo, com elastano. Feito sob medida e por encomenda, todos os tamanhos e cores.',
+        price: 90,
+        price2: 65,
         imgUrl: img6,
         id: 6
     },
     {
-        title: 'Cropped rosa corselet tomara que caia',
-        price: 65,
+        title: 'Conjunto cropped Tie-Dye verde & saia com amarração lateral',
+        desc: 'Tecido maleável, ajustável ao corpo, com elastano. Feito sob medida e por encomenda, todos os tamanhos e cores.',
+        price: 90,
+        price2: 65,
         imgUrl: img7,
         id: 7
     },
     {
-        title: 'Cropped rosa corselet tomara que caia',
-        price: 65,
+        title: 'Macacão vinho com manga flare',
+        desc: 'Tecido cotton algodão, ajustável ao corpo. Feito sob medida e por encomenda, todos os tamanhos e cores',
+        price: 120,
+        price2: 85,
         imgUrl: img8,
         id: 8
     },
