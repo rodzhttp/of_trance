@@ -9,20 +9,26 @@ import img8 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod8.p
 
 const products = [
     {
-        title: 'Macacão verde com manga flare',
+        title: 'Cropped preto',
+        desc: 'Mesmo cropped usado de diferentes jeitos. Tecido cotton algodão. Feito sob medida e por encomenda, todos os tamanhos e cores.',
         price: 85,
+        price2: 65,
         imgUrl: img,
         id: 1
     },
     {
-        title: 'Macacão preto com manga flare',
-        price: 85,
+        title: 'Calça flare preta',
+        desc: 'Feito sob medida e por encomenda, todos os tamanhos e cores.',
+        price: 100,
+        price2: 80,
         imgUrl: img2,
         id: 2
     },
     {
-        title: 'Cropped azul corselet tomara que caia',
-        price: 45,
+        title: 'Conjunto Tie-Dye Aquarela azul lilás',
+        desc: 'Cropped delicado com detalhes feitos a mão. Tecido maleável, ajustável ao corpo, estica bem. Feito sob medida e por encomenda, todos os tamanhos e cores.',
+        price: 110,
+        price2: 85,
         imgUrl: img3,
         id: 3
     },

@@ -23,7 +23,7 @@ const navigation = useNavigation();
 
         <View style={estilos.background}>
         
-        <Texto2 style={estilos.promotitulo}>PROMOÇÕES</Texto2>
+        <Texto2 style={estilos.promotitulo}>NOVOS PRODUTOS</Texto2>
 
             { promotions.map( (promotion) => { return (
 
@@ -33,6 +33,7 @@ const navigation = useNavigation();
                         <Image source={promotion.imgUrl} style={estilos.img} 
                         onClick={()=> navigation.navigate('Detalhes', {promotion})}/>
                     </TouchableOpacity>
+
                     <View style={estilos.packprod}>
                         <Texto style={estilos.promo}>{promotion.title}</Texto>
                         <Texto2 style={estilos.price}>DE R${promotion.price}</Texto2> 

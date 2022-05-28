@@ -18,10 +18,11 @@ export default function Detalhes({route}){
             <Texto style={estilos.promo}>{promotion.title}</Texto>
             <Texto2 style={estilos.price}>DE R${promotion.price}</Texto2> 
             <Texto2 style={estilos.price2}>POR APENAS R${promotion.price2}</Texto2> 
+                <TouchableOpacity >
+                    <Texto style={estilos.botao}>Comprar</Texto>
+                </TouchableOpacity>
             <Texto2 style={estilos.desc}>{promotion.desc}</Texto2>
-            <TouchableOpacity >
-                <Texto style={estilos.botao}>Comprar</Texto>
-            </TouchableOpacity>
+        
 
         </ScrollView> 
     </>
@@ -35,7 +36,7 @@ const estilos = StyleSheet.create({
     },
     img: {
         width: '100%',
-        height: valor,
+        height: 300,
         marginVertical: 10,
         borderRadius: '20px'
     },
@@ -66,6 +67,9 @@ const estilos = StyleSheet.create({
         textAlign: 'center',
         color: 'white',
         fontSize: 25,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        borderRadius: 10,
+        marginVertical: 10,
+        paddingVertical: 10,
     }
 })
