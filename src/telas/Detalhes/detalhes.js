@@ -3,14 +3,16 @@ import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/component
 import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
 import { StyleSheet, ScrollView, Image, Dimensions, onClick } from 'react-native';
 import { TouchableOpacity } from "react-native-web";
+//importações
 
 const width = Dimensions.get("screen").width;
 const largura = 720;
 const altura = 520;
 const valor = altura / largura * width;
+//constante que recebe o valor da img
 
 export default function Detalhes({route}){
-    const {promotion} = route.params
+    const {promotion} = route.params //constante que recebe as promoções do mock i(smulação de um banco de dados)
     return <>
         <ScrollView style={estilos.background} >
 

@@ -2,11 +2,11 @@ import React from "react";
 import { StyleSheet, Image, Dimensions } from 'react-native';
 import topo from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/topo3.png';
 
-//constante pra receber o tamanho da imagem 
 const width = Dimensions.get("screen").width;
 const largura = 720;
 const altura = 480;
 const valor = altura / largura * width;
+//constante pra receber o tamanho da imagem
 
 export default function Topo() {
     return <>

@@ -2,6 +2,7 @@ import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 import Topo from './componentes/topo'
 import Promo from './componentes/promo';
+//importando os componentes "topo e promo"
 
 export default function Colecao(){
     return <> 
@@ -12,7 +13,7 @@ export default function Colecao(){
             <Promo />
             </View>
         </ScrollView>
-  
+
     </>
 }
 

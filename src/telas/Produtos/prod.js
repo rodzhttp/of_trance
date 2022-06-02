@@ -4,12 +4,13 @@ import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componen
 import promotions from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/utils/products.js'
 import { StyleSheet, Image, View, ScrollView, TouchableOpacity, Dimensions } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
-
+//importações
 
 const width = Dimensions.get("screen").width;
 const largura = 720;
 const altura = 520;
 const valor = altura / largura * width;
+//constante que recebe o valor da img
 
 export default function Produtos(){
 const navigation = useNavigation();
@@ -41,6 +42,8 @@ const navigation = useNavigation();
         </ScrollView>    
     </> 
 }
+//TouchableOpacity = elemento para clicar na imagem, e através do onClick ele nos direciona
+//a tela de detalhes
 
 const estilos = StyleSheet.create({
     // PRODUTOS

@@ -6,6 +6,7 @@ import img5 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod5.p
 import img6 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod6.png';
 import img7 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod7.png';
 import img8 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/prod8.png';
+//importação das img
 
 const products = [
     {
@@ -16,6 +17,7 @@ const products = [
         imgUrl: img,
         id: 1
     },
+    //objetos e seus valores
     {
         title: 'Calça flare preta',
         desc: 'Feito sob medida e por encomenda, todos os tamanhos e cores.',

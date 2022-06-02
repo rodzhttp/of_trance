@@ -10,3 +10,5 @@ const estilos = StyleSheet.create({
         fontFamily: 'MontSerratRegular'
     },
 })
+
+//exportando a fonte pra poder chama-la em outros arquivos

@@ -10,3 +10,6 @@ const estilos = StyleSheet.create({
         fontFamily: 'KanitRegular'
     }
 })
+
+
+//exportando a fonte pra poder chama-la em outros arquivos

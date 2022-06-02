@@ -1,7 +1,7 @@
 import React, {Fragment} from "react";
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
 import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
-import { StyleSheet, Image, View, Dimensions, TouchableOpacity, onClick } from 'react-native';
+import { StyleSheet, Image, View, Dimensions, TouchableOpacity, onClick, ScrollView } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import promotions from "../../../utils/promotions";
 
@@ -13,6 +13,8 @@ const valor = altura / largura * width;
 export default function Promo(){
 const navigation = useNavigation();
 
+
+//descrições da loja
     return <>
         <Texto2 style={estilos.titulo}>ॐ RAVESTORE</Texto2>
         <Texto style={estilos.desc1}>Confecção à mão<br/>Totalmente singular</Texto>
@@ -22,16 +24,16 @@ const navigation = useNavigation();
         <Texto style={estilos.desc2}>- Entregas no metrô & correios</Texto>
 
         <View style={estilos.background}>
-        
-        <Texto2 style={estilos.promotitulo}>NOVOS PRODUTOS</Texto2>
+    
+        <Texto2 style={estilos.promotitulo}>NOVOS PRODUTOS</Texto2> 
 
-            { promotions.map( (promotion) => { return (
+            { promotions.map( (promotion) => { return ( 
 
                 <Fragment key={promotion.id}> 
-                
+        
                     <TouchableOpacity>
                         <Image source={promotion.imgUrl} style={estilos.img} 
-                        onClick={()=> navigation.navigate('Detalhes', {promotion})}/>
+                        onClick={()=> navigation.navigate('Detalhes', {promotion})}/> 
                     </TouchableOpacity>
 
                     <View style={estilos.packprod}>
@@ -39,10 +41,11 @@ const navigation = useNavigation();
                         <Texto2 style={estilos.price}>DE R${promotion.price}</Texto2> 
                         <Texto2 style={estilos.price2}>POR APENAS R${promotion.price2}</Texto2> 
                     </View>
-                    
                 </Fragment> ) } ) }
         </View>
     </>
+    //TouchableOpacity = elemento para clicar na imagem, e através do onClick ele nos direciona
+    //a tela de detalhes
 }
 
 const estilos = StyleSheet.create({

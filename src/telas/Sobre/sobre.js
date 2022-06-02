@@ -1,15 +1,19 @@
 import React from "react";
 import Texto from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto';
 import Texto2 from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/src/componentes/Texto2';
+
 import instalogo from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/insta.png';
 import emaillogo from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/email.png';
 import feedback from 'C:/Users/Rodrigo/Desktop/OFTRANCE/app-of-trance/assets/feedback.png';
+//importação das imagens
+
 import { StyleSheet, ScrollView, View, Image, Dimensions } from 'react-native';
 
 const width = Dimensions.get("screen").width;
 const largura = 720;
 const altura = 480;
 const valor = altura / largura * width;
+//constante que recebe o valor da img
 
 export default function Produtos(){
     return <>
@@ -40,7 +44,6 @@ export default function Produtos(){
 
         </ScrollView>
 
-        
     </>
 }
 
